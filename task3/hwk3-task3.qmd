@@ -1,4 +1,29 @@
+# Generative AI Reflection
 
+## Concept Clarification
+
+## Prompt 
+
+## Reflection
+
+
+In this task you will explore common problems that may arise in high-dimensional datasets, in which the number of features is larger than the number of observations and use generative AI to aid in your understanding on this setting.
+
+Your final submission will include: a concept from the reading you wanted clarification on, the initial prompt you used to get clarification from a genAI chatbot, and a short reflection on how you used genAI.
+
+Read section 6.4 Considerations in High Dimensions in the course textbook: An Introduction to Statistical Learning with applications in Python. The section covers challenges to fitting regression models and interpreting results on high-dimensional data.
+
+While reading, identify one concept or claim from the section that you did not fully understand.
+
+This step is designeed to help you write more detailed prompts. Use a generative AI tool (such as ChatGPT or Claude) to help clarify the concept you did not fully understand. Save your prompt so you can report it in this task. Your prompt should go beyond “explain X to me.” and should include at least two of the following elements:
+
+Your background (For example: “I am X who knows Y and is learning about Z, I am reading X for my course on Y, etc)
+The specific source of confusion
+A requested format or approach (e.g.: “use a concrete numerical example” or create an analogy)
+A constraint or comparison (“explain how Z method differs from Y method” or “avoid matrix notation”)
+If the response didn’t fully resolve your confusion, iterate: refine your next prompt and try again.
+
+In a short paragraph (4–6 sentences), reflect on your use of generative AI in this task: which tool did you use, what prompts did you give it, and how many iterations did it take to get it to clarify your question? Did the response match the information given in the textbook? This short reflection should be independently written by you, with no AI assistance.
 Title + intro	Title + one sentence explaining the content of the document
 Concept to clarify	The concept or claim that you looked clarification for
 Prompt	The initial prompt you wrote to gain understanding

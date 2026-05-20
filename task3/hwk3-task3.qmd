@@ -2,32 +2,22 @@
 The purpose of this Quarto document is to explore how AI (when prompted carefully and appropriately) may provide understandings of complex topics; albeit, provided explanations should be interpreted with caution.
 
 ## Concept Clarification
-One concept I found particularly difficult to grasp was multicollinearity in a high dimensionality space. While the textbook explains briefly the issue with mutiple correlations among predictors and their associated response, I found the explanation and included example to be full of jargon. As such, I chose this specific concept for further clarification. 
+One concept I found particularly difficult to grasp was multicollinearity in a high dimensionality space. While the textbook explains briefly the issue with mutiple correlations among predictors and their associated response, I found the explanation and included example to be full of jargon. Knowing this concept is important for interpretations in high-dimensionality settings. As such, I chose this specific concept for further clarification. 
 
 ## Prompt 
-I prompted Claude 
+I prompted Claude to provide a clear breakdown of this concept. Below are the list of prompts I asked it to explain to me so I could better understand high-dimensional multicollinearity. 
+
+1. "I am an environmental data science student who knows data science concepts and applications. While reading Chapter 6.4 of my machine learning textbook titled 'An Introduction to Statistical Learning with applications in Python', I came across the dangers of multicollinearity in a high-dimensional setting. However, I am struggling to imagine and visualize what this signifies. Please give me a simplified example of what exactly multicollinearity in a high-dimension setting looks like and why it is critical to understand regarding interpretation." 
+
+2. "Please simplify your explanation of the diagram you provided as well as excluding any mathematical notation."
+
+-**Answer**: "Here's the simpler version.
+Multicollinearity means some of your predictors are basically telling you the same thing. In a watershed, "% cropland" and "fertilizer use" rise and fall together — so they're near-duplicates.
+When you have just two duplicate predictors, your model can't tell their effects apart. It can credit one or the other (or split it any way) and the predictions come out the same. So the coefficients become unstable and untrustworthy.
+In a high-dimensional setting you don't have two duplicates — you have dozens of predictors that all move together, and very few observations. Now the problem explodes: many different combinations of predictors fit the data equally well. That's exactly what the diagram shows. Three models, almost no predictors in common, all with the same R². The data simply cannot tell you which set is the "right" one.
+Why this matters for interpretation: if your model selects "septic density" as important, you cannot conclude septic systems cause algae. A different equally-good model blamed cropland instead. The real driver might be phosphorus — something you never even measured — and all your predictors are just stand-ins for it.
+So the one thing to remember: in high dimensions with correlated predictors, you can still build a model that predicts well, but you cannot trust it to tell you which variables actually matter. Prediction is fine; explanation is not."
+
 
 ## Reflection
-
-
-In this task you will explore common problems that may arise in high-dimensional datasets, in which the number of features is larger than the number of observations and use generative AI to aid in your understanding on this setting.
-
-Your final submission will include: a concept from the reading you wanted clarification on, the initial prompt you used to get clarification from a genAI chatbot, and a short reflection on how you used genAI.
-
-Read section 6.4 Considerations in High Dimensions in the course textbook: An Introduction to Statistical Learning with applications in Python. The section covers challenges to fitting regression models and interpreting results on high-dimensional data.
-
-While reading, identify one concept or claim from the section that you did not fully understand.
-
-This step is designeed to help you write more detailed prompts. Use a generative AI tool (such as ChatGPT or Claude) to help clarify the concept you did not fully understand. Save your prompt so you can report it in this task. Your prompt should go beyond “explain X to me.” and should include at least two of the following elements:
-
-Your background (For example: “I am X who knows Y and is learning about Z, I am reading X for my course on Y, etc)
-The specific source of confusion
-A requested format or approach (e.g.: “use a concrete numerical example” or create an analogy)
-A constraint or comparison (“explain how Z method differs from Y method” or “avoid matrix notation”)
-If the response didn’t fully resolve your confusion, iterate: refine your next prompt and try again.
-
-In a short paragraph (4–6 sentences), reflect on your use of generative AI in this task: which tool did you use, what prompts did you give it, and how many iterations did it take to get it to clarify your question? Did the response match the information given in the textbook? This short reflection should be independently written by you, with no AI assistance.
-Title + intro	Title + one sentence explaining the content of the document
-Concept to clarify	The concept or claim that you looked clarification for
-Prompt	The initial prompt you wrote to gain understanding
-Generative AI reflection	Answer to step 5
+I opted to use Claude to clarify this topic in the simplest terms possible. My first prompt produced a very insightful diagram of an example with many aquatic variables that were severely correlated and how cross validation was used on three models to compared the "best" R squared value, concluding that all three simulated models predict lake algae very well but each had different *drivers*; the data can't conclude which predictors are causal across all three models. While the diagram was very insighful, the accompanying explanation was an eyesore; in my opinion, it was worse than the explanation provided in the book! Ultimately, it took two iterations to return a simplified but meaningful explanation of exactly why multicollinearity matters for careful interpretation in a high-dimensional space: you cannot just conclude that a predictor like "septic density" is important for predicting lake algar because there could be another "good" model that identified cropland as the main driver instead.

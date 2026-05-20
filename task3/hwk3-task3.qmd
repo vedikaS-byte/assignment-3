@@ -1,0 +1,5 @@
+
+Title + intro	Title + one sentence explaining the content of the document
+Concept to clarify	The concept or claim that you looked clarification for
+Prompt	The initial prompt you wrote to gain understanding
+Generative AI reflection	Answer to step 5

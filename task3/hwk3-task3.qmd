@@ -1,8 +1,11 @@
-# Generative AI Reflection
+# Considerations in High Dimensions Activity
+The purpose of this Quarto document is to explore how AI (when prompted carefully and appropriately) may provide understandings of complex topics; albeit, provided explanations should be interpreted with caution.
 
 ## Concept Clarification
+One concept I found particularly difficult to grasp was multicollinearity in a high dimensionality space. While the textbook explains briefly the issue with mutiple correlations among predictors and their associated response, I found the explanation and included example to be full of jargon. As such, I chose this specific concept for further clarification. 
 
 ## Prompt 
+I prompted Claude 
 
 ## Reflection
 
